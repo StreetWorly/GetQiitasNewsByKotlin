@@ -23,6 +23,7 @@ class MainActivity : RxAppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        title = "記事の検索"
         val listView: ListView = findViewById(R.id.list_view) as ListView
         val progressBar = findViewById(R.id.progress_bar) as ProgressBar
         val queryEditText = findViewById(R.id.query_edit_text) as EditText

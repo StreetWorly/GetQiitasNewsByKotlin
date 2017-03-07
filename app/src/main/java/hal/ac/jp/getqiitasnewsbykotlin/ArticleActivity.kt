@@ -26,6 +26,7 @@ class ArticleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_article)
 
+        title = "記事の詳細"
         val articleView = findViewById(R.id.article_view) as ArticleView
         val webView = findViewById(R.id.web_view) as WebView
 
