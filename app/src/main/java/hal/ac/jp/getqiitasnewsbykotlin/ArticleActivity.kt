@@ -3,7 +3,6 @@ package hal.ac.jp.getqiitasnewsbykotlin
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
 import android.webkit.WebView
 import hal.ac.jp.getqiitasnewsbykotlin.model.Article
@@ -29,7 +28,6 @@ class ArticleActivity : AppCompatActivity() {
         title = "記事の詳細"
         val articleView = findViewById(R.id.article_view) as ArticleView
         val webView = findViewById(R.id.web_view) as WebView
-
         val article: Article = intent.getParcelableExtra(ARTICLE_EXTRA)
         articleView.setArticle(article)
         webView.loadUrl(article.url)

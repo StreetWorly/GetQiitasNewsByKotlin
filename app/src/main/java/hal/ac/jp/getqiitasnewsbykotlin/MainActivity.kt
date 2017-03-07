@@ -1,6 +1,7 @@
 package hal.ac.jp.getqiitasnewsbykotlin
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -33,6 +34,7 @@ class MainActivity : RxAppCompatActivity() {
         listView.adapter = listAdapter
         listView.setOnItemClickListener { adapterView, view, position, id ->
             val intent = ArticleActivity.intent(this, listAdapter.articles[position])
+            Log.d("Article", listAdapter.articles[position].toString())
             startActivity(intent)
         }
 
@@ -45,7 +47,6 @@ class MainActivity : RxAppCompatActivity() {
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build()
         val articleClient = retrofit.create(ArticleClient::class.java)
-
 
         searchButton.setOnClickListener {
             progressBar.visibility = View.VISIBLE

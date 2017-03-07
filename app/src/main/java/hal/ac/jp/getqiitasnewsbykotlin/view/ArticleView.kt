@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.ToggleButton
 import com.bumptech.glide.Glide
 import hal.ac.jp.getqiitasnewsbykotlin.R
 import hal.ac.jp.getqiitasnewsbykotlin.bindView
