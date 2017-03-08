@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.util.Log
 import android.view.View
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ListView
@@ -23,6 +24,8 @@ class MainFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v: View = inflater!!.inflate(R.layout.main_fragment, container, false)
 
+
+        activity.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         val listView: ListView = v.findViewById(R.id.list_view) as ListView
         val progressBar = v.findViewById(R.id.progress_bar) as ProgressBar
         val queryEditText = v.findViewById(R.id.query_edit_text) as EditText
