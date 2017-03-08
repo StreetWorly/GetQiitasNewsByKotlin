@@ -27,7 +27,8 @@
                 android:fontFamily="serif-monospace"
                 android:textColor="@android:color/background_light"
                 android:textSize="24sp"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:layout_marginTop="5dp" />
 
             <hal.ac.jp.getqiitasnewsbykotlin.view.ArticleView
                 android:id="@+id/article_view"

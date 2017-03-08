@@ -3,21 +3,13 @@ package hal.ac.jp.getqiitasnewsbykotlin
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ListView
-import android.widget.ProgressBar
-import com.google.gson.FieldNamingPolicy
-import com.google.gson.GsonBuilder
 import hal.ac.jp.getqiitasnewsbykotlin.DAO.MyDatabase
-import hal.ac.jp.getqiitasnewsbykotlin.client.ArticleClient
 import hal.ac.jp.getqiitasnewsbykotlin.model.Article
 import hal.ac.jp.getqiitasnewsbykotlin.model.User
-import retrofit2.Retrofit
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
-import retrofit2.converter.gson.GsonConverterFactory
 
 class FavoriteFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -41,14 +33,12 @@ class FavoriteFragment : Fragment() {
                     c.getString(4),
                     c.getString(5),
                     c.getString(6)))
-//            Log.d("table:::", c.getString(1).toString())
             b = c.moveToNext()
         }
         c.close()
         listView.adapter = listAdapter
         listView.setOnItemClickListener { adapterView, view, position, id ->
             val intent = ArticleActivity.intent(context, listAdapter.articles[position])
-//            Log.d("Article", listAdapter.articles[position].toString())
             startActivity(intent)
         }
         return v

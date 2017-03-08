@@ -2,11 +2,8 @@ package hal.ac.jp.getqiitasnewsbykotlin
 
 import android.content.Context
 import android.content.Intent
-import android.database.Cursor
-import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import android.webkit.WebView
 import android.widget.Button
 import android.widget.Toast
@@ -53,9 +50,6 @@ class ArticleActivity : AppCompatActivity() {
             b = c.moveToNext()
         }
         c.close()
-
-        Log.d("flg::::::", flg)
-        Log.d("article_id::::::", article.id)
 
         if (flg == article.id) {
             insertBtn.text = "お気に入りの削除"

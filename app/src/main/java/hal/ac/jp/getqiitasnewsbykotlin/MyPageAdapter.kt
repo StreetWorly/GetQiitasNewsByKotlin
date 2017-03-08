@@ -2,12 +2,10 @@ package hal.ac.jp.getqiitasnewsbykotlin
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentPagerAdapter
-import android.view.ViewGroup
-import android.support.v4.view.ViewPager
+import android.support.v4.app.FragmentStatePagerAdapter
 
 
-class MyPageAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
+class MyPageAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
     val fragments: Array<Fragment> = arrayOf(MainFragment(), FavoriteFragment())
 
     override fun getCount(): Int = 2
