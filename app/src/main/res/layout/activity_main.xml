@@ -7,44 +7,56 @@
     android:orientation="vertical"
     tools:context="hal.ac.jp.getqiitasnewsbykotlin.MainActivity">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+    <android.support.v4.view.ViewPager android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:id="@+id/pager">
 
-        <ListView
-            android:id="@+id/list_view"
+        <android.support.v4.view.PagerTabStrip
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-
-        <ProgressBar
-            android:id="@+id/progress_bar"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:visibility="gone" />
-    </FrameLayout>
+            android:id="@+id/tab">
+        </android.support.v4.view.PagerTabStrip>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="bottom"
-        android:orientation="horizontal">
+    <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1">-->
 
-        <EditText
-            android:id="@+id/query_edit_text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="text" />
+        <!--<ListView-->
+            <!--android:id="@+id/list_view"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1" />-->
 
-        <Button
-            android:id="@+id/search_button"
-            android:layout_width="62dp"
-            android:layout_height="33dp"
-            android:background="@drawable/shape_button"
-            android:text="検索" />
-    </LinearLayout>
+        <!--<ProgressBar-->
+            <!--android:id="@+id/progress_bar"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:visibility="gone" />-->
+    <!--</FrameLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="bottom"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/query_edit_text"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:inputType="text" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/search_button"-->
+            <!--android:layout_width="62dp"-->
+            <!--android:layout_height="33dp"-->
+            <!--android:background="@drawable/shape_button"-->
+            <!--android:text="検索" />-->
+    <!--</LinearLayout>-->
+    </android.support.v4.view.ViewPager>
 
 </LinearLayout>

@@ -17,6 +17,18 @@
             android:layout_height="match_parent"
             android:orientation="vertical" >
 
+            <Button
+                android:text="お気に入りに登録"
+                android:background="@drawable/shape_button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button"
+                android:layout_weight="1"
+                android:fontFamily="serif-monospace"
+                android:textColor="@android:color/background_light"
+                android:textSize="24sp"
+                android:textAllCaps="false" />
+
             <hal.ac.jp.getqiitasnewsbykotlin.view.ArticleView
                 android:id="@+id/article_view"
                 android:layout_width="match_parent"
