@@ -18,8 +18,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ArticleActivity" />
-        <activity android:name=".MainFragment" />
-        <activity android:name=".FavoriteFragment"></activity>
     </application>
 
 </manifest>
